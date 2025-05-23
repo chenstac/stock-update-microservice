@@ -22,7 +22,7 @@ import json
 
 context = zmq.Context()
 socket = context.socket(zmq.REQ)
-socket.connect("tcp://localhost:5555")  # Connect to microservice
+socket.connect("tcp://localhost:5555")
 
 items = [
     {"name": "Apple", "price": 0.99, "in_stock": True},
@@ -40,3 +40,8 @@ Example call:
 response = socket.recv_json()
 print("Filtered in-stock items:", response)
 ```
+
+## UML Sequence Diagram
+
+![UML Sequence Diagram](https://github.com/user-attachments/assets/3ffdda39-f489-4816-b723-e6c7a7be7159)
+
